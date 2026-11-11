@@ -5,55 +5,163 @@
 @media(max-width:700px){.topbar{padding:16px}.brand{font-size:9px;letter-spacing:1px}.live{font-size:8px}.nav{padding:0 12px 13px;gap:2px}.nav a{font-size:9px;padding:9px 10px}.wrap{padding:15px}.hero{padding:32px 20px}.hero:after{font-size:90px}.story-grid{grid-template-columns:1fr}.story-card{padding:15px}.story-icon{margin:10px 0 5px}.photo-preview,.gallery{gap:13px}.photo-frame{padding:7px}.photo-window{height:160px}.large-frame .photo-window{height:230px}.news-item{grid-template-columns:28px 1fr;gap:10px}.news-stamp{display:none}.news-item h2{font-size:17px}.music-panel{padding:15px}.album-art{width:82px;height:82px}.album-art span{font-size:35px}.music-info h2{font-size:23px}footer{font-size:7px;flex-direction:column}.section-heading h2{font-size:22px}.section-heading{align-items:center}}
 @media(max-width:390px){.photo-window{height:135px}.large-frame .photo-window{height:190px}.brand span:last-child{max-width:130px;line-height:1.4}.live{max-width:100px;text-align:right}}
 
-/* ===== NNN RED & WHITE EDITION ===== */
-:root{--bg:#fff7f7;--panel:#ffffff;--panel2:#fff0f0;--ink:#241014;--muted:#765e63;--red:#d71920;--gold:#d71920;--line:rgba(120,20,30,.16)}
-body{background:radial-gradient(circle at 85% 0%,#ffe1e3 0,transparent 34%),#fff7f7;color:#241014}
-.brand-mark,.ticker-label{background:#d71920;color:#fff;box-shadow:0 5px 20px #d7192033}
-.live,.on-air{color:#b3131a}
-.live i,.on-air i{background:#d71920;box-shadow:0 0 12px #d71920}
-.nav{border-bottom-color:#edc8cb}
-.nav a{color:#805c61}
-.nav a.active,.nav a:hover{background:#d71920;color:#fff}
-.ticker{background:#fff;border-color:#edc8cb;box-shadow:0 4px 16px #8c18200a}
-.ticker-track{color:#5c3035}
-.hero{background:linear-gradient(120deg,#fff 0%,#fff0f1 62%,#ffdfe1 100%);border:1px solid #efb8bd;box-shadow:0 12px 30px #a7192010}
-.hero:after{color:#d719200c}
-.eyebrow{color:#c0161e}
-.hero h1 span,.page-intro h1 span{color:#d71920}
-.hero-sub,.page-intro>p:last-child{color:#765e63}
-.hero-meta{color:#815e63}
-.text-link,.read-more{color:#c0161e}
-.story-card{background:#fff;border-color:#f0d2d4;box-shadow:0 7px 20px #9d1a240b}
-.story-card:hover{border-color:#d71920;background:#fff5f5}
-.tag.red{background:#ffe4e5;color:#b3131a}
-.tag.gold,.tag.blue,.tag.purple{background:#fff0f0;color:#b3131a}
-.story-card p{color:#765e63}
-.quote-strip{border-left-color:#d71920;background:#ffeded}
-.quote-mark{color:#d71920}
-.photo-frame{background:linear-gradient(135deg,#b80f18,#fff 28%,#f7bfc3 60%,#d71920);box-shadow:0 12px 30px #8e151c24}
-.photo-frame:hover{box-shadow:0 0 0 2px #d7192066,0 15px 35px #8e151c24}
-.photo-window{background:#fff;border-color:#fff}
-.photo-placeholder{color:#9c555b;background:repeating-linear-gradient(135deg,#fff0f1,#fff0f1 10px,#ffe1e3 10px,#ffe1e3 20px)}
-figcaption{color:#54171d}
-.bottom-cta p{color:#765e63}
-.glow-button{border:1px solid #b90f18;background:linear-gradient(120deg,#e52b32,#b90f18);color:#fff;box-shadow:0 0 0 4px #d7192012,0 0 17px #d7192055}
-.glow-button:hover{box-shadow:0 0 0 5px #d7192022,0 0 27px #d7192088}
-@keyframes glow{0%,100%{box-shadow:0 0 0 3px #d7192012,0 0 12px #d7192055}50%{box-shadow:0 0 0 5px #d7192020,0 0 24px #d7192088}}
-footer{border-top-color:#edc8cb;color:#9a7378}
-.news-list{border-top-color:#edc8cb}
-.news-item{border-bottom-color:#edc8cb}
-.news-number{color:#d71920}
-.news-item p{color:#765e63}
-.news-stamp{color:#a16f75}
-.music-panel{background:linear-gradient(130deg,#fff,#ffebed);border-color:#efc2c6;box-shadow:0 10px 26px #9d1a240d}
-.album-art{background:linear-gradient(135deg,#e52b32,#b90f18 60%,#fff0f1);color:#fff;box-shadow:0 8px 22px #a7192025}
-.music-info h2{color:#c0161e}
-.music-info>p:not(.eyebrow){color:#765e63}
-.audio-help{color:#765e63}
-.wish-area{border-color:#e9aeb3;background:radial-gradient(circle at 50% 0%,#d7192010,transparent 60%),#fff}
-.wish-tease{color:#765e63}
-.wish-message{background:#fff1f2;border-color:#e9aeb3}
-.wish-message h2{color:#c0161e}
-.wish-message p{color:#5e3439}
-.wish-message .signoff{color:#c0161e}
-@media(max-width:700px){.nav a.active,.nav a:hover{background:#d71920;color:#fff}}
+
+/* ===== NNN NEWSROOM NAVY + ORANGE EDITION ===== */
+:root {
+  --bg: #101D32;
+  --panel: #1D2D46;
+  --panel2: #263A57;
+  --ink: #FFFFFF;
+  --muted: #D5DFED;
+  --red: #F04438;
+  --gold: #FFB547;
+  --line: rgba(255,255,255,.14);
+}
+
+body {
+  background:
+    radial-gradient(circle at 82% 0%, #263E5D 0, transparent 34%),
+    var(--bg);
+  color: var(--ink);
+}
+
+.brand-mark {
+  background: var(--red);
+  color: #fff;
+  box-shadow: 0 5px 20px #F0443844;
+}
+
+.live, .on-air { color: #FFB5AC; }
+.live i, .on-air i {
+  background: var(--red);
+  box-shadow: 0 0 12px var(--red);
+}
+
+.nav { border-bottom-color: var(--line); }
+.nav a { color: #B8C7DA; }
+.nav a.active, .nav a:hover {
+  background: var(--gold);
+  color: #101D32;
+}
+
+.ticker {
+  background: #1D2D46;
+  border-color: var(--line);
+}
+.ticker-label { background: var(--red); color: #fff; }
+.ticker-track { color: #F1F5FA; }
+
+.hero {
+  background: linear-gradient(120deg, #1D2D46 0%, #172A43 65%, #29435D 100%);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 30px #0003;
+}
+.hero:after { color: #FFFFFF0A; }
+.eyebrow { color: var(--gold); }
+.hero h1 span, .page-intro h1 span { color: var(--gold); }
+.hero-sub, .page-intro>p:last-child { color: var(--muted); }
+.hero-meta { color: #C4D1E1; }
+
+.text-link, .read-more { color: var(--gold); }
+.story-card {
+  background: var(--panel);
+  border-color: var(--line);
+}
+.story-card:hover {
+  border-color: var(--gold);
+  background: var(--panel2);
+}
+.tag.red { background: #F0443826; color: #FF9188; }
+.tag.gold { background: #FFB54726; color: #FFCB78; }
+.tag.blue { background: #39A9FF26; color: #8ACBFF; }
+.tag.purple { background: #B99AFF26; color: #D0BFFF; }
+.story-card p { color: var(--muted); }
+
+.quote-strip {
+  border-left-color: var(--gold);
+  background: #FFFFFF0A;
+}
+.quote-mark { color: var(--gold); }
+
+.photo-frame {
+  background: linear-gradient(135deg, #FFB547, #FFF0CC 28%, #D98224 60%, #FFB547);
+  box-shadow: 0 12px 30px #0005;
+}
+.photo-frame:hover {
+  box-shadow: 0 0 0 2px #FFB54788, 0 15px 35px #0007;
+}
+.photo-window {
+  background: #101D32;
+  border-color: #1D2D46;
+}
+.photo-placeholder {
+  color: #D5DFED;
+  background: repeating-linear-gradient(
+    135deg, #1D2D46, #1D2D46 10px, #263A57 10px, #263A57 20px
+  );
+}
+figcaption { color: #172235; }
+
+.bottom-cta p { color: var(--muted); }
+.glow-button {
+  border: 1px solid var(--gold);
+  background: linear-gradient(120deg, #FFD27A, #FF9F1C);
+  color: #172235;
+  box-shadow: 0 0 0 4px #FFB54718, 0 0 17px #FFB54770;
+}
+.glow-button:hover {
+  box-shadow: 0 0 0 5px #FFB54725, 0 0 27px #FFB547AA;
+}
+
+footer {
+  border-top-color: var(--line);
+  color: #9EADC1;
+}
+.news-list { border-top-color: var(--line); }
+.news-item { border-bottom-color: var(--line); }
+.news-number { color: var(--gold); }
+.news-item p { color: var(--muted); }
+.news-stamp { color: #9EADC1; }
+
+.music-panel {
+  background: linear-gradient(130deg, #1D2D46, #142238);
+  border-color: var(--line);
+}
+.album-art {
+  background: linear-gradient(135deg, #F04438, #FF9F1C 60%, #263A57);
+  color: #fff;
+}
+.music-info h2 { color: var(--gold); }
+.music-info>p:not(.eyebrow), .audio-help { color: var(--muted); }
+
+.wish-area {
+  border-color: #FFB54755;
+  background:
+    radial-gradient(circle at 50% 0%, #FFB54718, transparent 60%),
+    #FFFFFF06;
+}
+.wish-tease { color: var(--muted); }
+.wish-message {
+  background: #1D2D46;
+  border-color: #FFB54788;
+}
+.wish-message h2 { color: var(--gold); }
+.wish-message p { color: #E5ECF5; }
+.wish-message .signoff { color: var(--gold); }
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 0 3px #FFB54718, 0 0 12px #FFB54766;
+  }
+  50% {
+    box-shadow: 0 0 0 5px #FFB54728, 0 0 24px #FFB547AA;
+  }
+}
+
+@media(max-width:700px) {
+  .nav a.active, .nav a:hover {
+    background: var(--gold);
+    color: #101D32;
+  }
+}
+
